@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI TASK</title>
+    <link rel="stylesheet" href="ui.css">
+</head>
+
+<body>
+<a th:href="@{/showNewEmployeeForm}"><button> Add</button></a>
+
+<form th:action="@{/import}" method="post" enctype="multipart/form-data">
+    <input type="file" th:name="file" />
+    <input th:type="submit" value="Import" />
+</form>
+<table>
+    <tr>
+        <th><button><a th:href="@{'/details/Java/1'}">JAVA</a></button></th>
+        <th><button><a th:href="@{'/details/UI/1'}">UI</a></button></th>
+        <th><button><a th:href="@{'/details/Support/1'}">Support</a></button></th>
+    </tr>
+
+    <tr>
+        <th><button><a th:href="@{'/details/Devops/1'}">DEVOps</a></button></th>
+        <th><button><a th:href="@{'/details/SDET/1'}">SDET</a></button></th>
+        <th><button><a th:href="@{'/details/DE/1'}">DE</a></button></th>
+    </tr>
+</table>
+</body>
+</html>
